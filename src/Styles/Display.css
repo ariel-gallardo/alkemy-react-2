@@ -1,0 +1,28 @@
+.app{
+    display: grid;
+    grid-template-areas:"navigation"
+                        "content"
+                        "footer";
+}
+
+.navigation{
+    grid-area: navigation;
+    height: 10vh;
+}
+
+.content{
+    grid-area: content; height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.centerContent{
+    display: flex;
+    justify-content: center;
+}
+
+.footer{
+    grid-area: footer;
+     height: 10vh;
+}
