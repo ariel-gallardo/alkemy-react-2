@@ -1,4 +1,4 @@
-import './Styles/App.css'
+import '../Styles/App.css'
 
 const Content = ({children}) => <>
     <div className='app'>

@@ -1,10 +1,11 @@
-import Content from "./Components/Content";
+import Components from "./Components";
+import Views from './Views'
 
 function App() {
   return (
-   <Content>
-    
-   </Content> 
+   <Components.Content>
+      <Views.Login/>
+   </Components.Content> 
   );
 }
 
