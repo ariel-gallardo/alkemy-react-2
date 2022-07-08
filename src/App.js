@@ -10,6 +10,7 @@ function App() {
           <Routes>
             <Route exact path="/login" element={<Views.Login />} />
             <Route exact path="/register" element={<Views.Register />} />
+            <Route exact path='/tasks' element={<Views.Tasks />} />
           </Routes>
         </Components.Content>
       </Components.Countries.Provider>
