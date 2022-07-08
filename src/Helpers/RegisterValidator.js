@@ -1,9 +1,12 @@
 const RegisterValidator = (values) => {
-    const {email, password} = values
-    let errors
+    const {email, password, repassword, role, region, country} = values
+    let errors = {}
 
     !email && (errors.email = '*')
     !password && (errors.password = '*')
+     role === 'none' && (errors.role = '*')
+     country === 'none' && (errors.country = '*')
+     region === 'none' && (errors.region = '*')
 
     if(email){
         if(email.length > 30 || email.length <  6)
@@ -20,6 +23,9 @@ const RegisterValidator = (values) => {
         else if(!password.match(/[0-9]{1}/))
             errors.password = 'Al menos debe haber un numero.'
     }
+
+    if(password !== repassword)
+        errors.repassword = 'Ambas deben ser iguales.'
 
     return errors
 }
